@@ -21,7 +21,13 @@
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="biography.html">Biography</a>
-                <a href="gallery.html">Gallery</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropbtn active-exempt">Media <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="video.html">Video</a>
+                    </div>
+                </div>
                 <a href="upcoming.html">Upcoming</a>
                 <a href="programs.html">Programs</a>
                 <a href="contact.html">Contact</a>
@@ -41,13 +47,11 @@
             <div class="content-left fade-in-left">
                 <h2 class="section-title">Biography</h2>
                 <div class="bio-text">
-                    <p><strong>Lin Yizhe</strong> is a Chinese youth collaborative pianist. She is currently admitted to the Artist Diploma (Level 8) program in Opera Repetiteur at the Royal Birmingham Conservatoire with a substantial scholarship, and will enroll in September 2025. Previously, she graduated from the Royal College of Music (RCM) with a Master's degree in Collaborative Piano, where she studied under Simon Lepper, renowned vocal coach Roger Vignoles, and official BBC accompanist Elizabeth Burley.</p>
-                    
-                    <p>She began learning the piano at age 3 and received vocal training from age 12. She was admitted to the Shenzhen Arts School majoring in Vocal and Opera, and later graduated with a bachelor's degree in Music Education from the Zhejiang Conservatory of Music, where she received multiple scholarships including the First-Class Scholarship for Professional Excellence. She also won first prize in the youth division of the "Ludao Cup" Piano Competition.</p>
+                    <p><strong>Yizhe Lin</strong> is an opera répétiteur and collaborative pianist active in both China and the United Kingdom. She has worked closely with conductors Mark Austin and Paul Wingfield, as well as directors Lysanne van Overbeek and Rebecca Meltzer, taking part in major opera productions including <em>Orphée aux enfers</em>, <em>Le nozze di Figaro</em>, <em>Ariadne auf Naxos</em>, and <em>Falstaff</em>. With a keen sense of collaboration, she has received high praise in masterclasses with Pauliina Tukiainen and Markus Hadulla for her musical sensitivity and precise interpretation.</p>
 
-                    <p>As an active performer, Lin Yizhe has participated in a variety of performances, including symphonic choruses, marching bands, musicals, solo piano, and collaborative piano. She has performed in the Zhejiang Conservatory of Music's "Early Summer · Listening to the Wind" Collaborative Piano Concert, and the RCM Keyboard Festival Concert. She has also served as a piano accompanist for competitions such as the RCM Brooks van der Pump English Song Competition.</p>
-                    
-                    <p>She has participated and been highly praised in masterclasses led by internationally recognized vocal coaches such as Pauliina Tukiainen and Markus Hadulla. She was also appointed as an "Overseas Dandelion Envoy" by the Central Institute of Socialism, actively participating in the international dissemination of Chinese culture and the mutual learning of civilizations.</p>
+                    <p>Yizhe is currently pursuing an Artist Diploma in Opera Repetiteur at the Royal Birmingham Conservatoire, supported by a substantial scholarship. Prior to this, she graduated with Distinction from the Royal College of Music, where she studied with Head of Collaborative Piano Simon Lepper, distinguished coach Roger Vignoles, mezzo-soprano Patricia Bardon, and BBC staff accompanist Elizabeth Burley. Her interdisciplinary training in both piano and vocal studies provides her with a unique perspective, enabling a strong sense of breath and deep literary understanding in her interpretation of vocal repertoire.</p>
+
+                    <p>In addition, Yizhe is actively engaged in diverse artistic practices. She is a collaborative artist with the Birmingham Opera Company and a signed artist with Hemiola Music, and has been appointed as an “Overseas Dandelion Ambassador” by the Chinese Culture Institute, promoting cross-cultural exchange on international platforms such as the Birmingham Light Festival. From London and Birmingham to Shenzhen and Xiamen, she continues to explore the boundaries of collaborative piano through recitals and interdisciplinary performances with singers and instrumentalists.</p>
                 </div>
             </div>
             <div class="image-right fade-in-right">
@@ -76,7 +80,7 @@
                 <a href="gallery.html" class="rich-card">
                     <div class="rich-img" style="background-image: url('pic_01/con_00.jpg');"></div>
                     <div class="rich-content">
-                        <h4>Gallery</h4>
+                        <h4>Media</h4>
                         <p>View captures and special moments from previous concerts and masterclasses.</p>
                     </div>
                 </a>
@@ -119,6 +123,13 @@
             </div>
         </div>
     </footer>
+
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>

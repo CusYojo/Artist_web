@@ -21,7 +21,13 @@
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="biography.html">Biography</a>
-                <a href="gallery.html">Gallery</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropbtn active-exempt">Media <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="video.html">Video</a>
+                    </div>
+                </div>
                 <a href="upcoming.html">Upcoming</a>
                 <a href="programs.html">Programs</a>
                 <a href="contact.html">Contact</a>
@@ -75,7 +81,7 @@
                 <a href="gallery.html" class="rich-card">
                     <div class="rich-img" style="background-image: url('pic_01/con_00.jpg');"></div>
                     <div class="rich-content">
-                        <h4>Gallery</h4>
+                        <h4>Media</h4>
                         <p>View captures and special moments from previous concerts and masterclasses.</p>
                     </div>
                 </a>
@@ -118,6 +124,13 @@
             </div>
         </div>
     </footer>
+
+    
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
 
     <script src="script.js"></script>
 </body>

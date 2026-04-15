@@ -1,17 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Lin Yizhe is a Collaborative Pianist and Opera Repetiteur.">
-    <title>Lin Yizhe | Collaborative Pianist</title>
+    <title>Gallery - Lin Yizhe | Collaborative Pianist</title>
     <!-- Fonts and Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&family=Great+Vibes&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Sticky Navigation -->
@@ -21,7 +25,13 @@
             <nav class="nav-links">
                 <a href="index.html">Home</a>
                 <a href="biography.html">Biography</a>
-                <a href="gallery.html">Gallery</a>
+                <div class="nav-dropdown">
+                    <a href="#" class="dropbtn active-exempt">Media <i class="fas fa-caret-down"></i></a>
+                    <div class="dropdown-content">
+                        <a href="gallery.html">Gallery</a>
+                        <a href="video.html">Video</a>
+                    </div>
+                </div>
                 <a href="upcoming.html">Upcoming</a>
                 <a href="programs.html">Programs</a>
                 <a href="contact.html">Contact</a>
@@ -34,97 +44,235 @@
         </div>
     </header>
 
-<main style="min-height: calc(100vh - 100px); padding-top: 80px;">
-    <!-- Gallery / Concert Section -->
-    <section id="gallery" class="gallery gallery-section">
-        <div class="container">
-            <h2 class="section-title centered fade-in-up">In Concert</h2>
-            <p class="section-subtitle centered fade-in-up">Moments from Stage & Studio</p>
-            
-            <div class="masonry-gallery fade-in-up delay-1">
-                <div class="gallery-item large">
-                    <img src="pic_01/con_01.jpg" alt="Concert Performance 1">
-                    <div class="overlay"></div>
-                    <div class="caption">Royal Birmingham Conservatoire</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="pic_01/con_005.jpg" alt="Concert Performance 2">
-                    <div class="overlay"></div>
-                    <div class="caption">Collaborative Session</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="pic_01/con_006.jpg" alt="Concert Performance 3">
-                    <div class="overlay"></div>
-                    <div class="caption">Vocal Rehearsal</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="pic_01/con_03.jpg" alt="Concert Performance 4">
-                    <div class="overlay"></div>
-                    <div class="caption">Stage Appearance</div>
-                </div>
-                <div class="gallery-item wide">
-                    <img src="pic_01/con_00.jpg" alt="Concert Performance 5">
-                    <div class="overlay"></div>
-                    <div class="caption">Grand Hall Recital</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="pic_01/con_04.jpg" alt="Concert Performance 6">
-                    <div class="overlay"></div>
-                    <div class="caption">Post-Concert Moment</div>
-                </div>
-                <div class="gallery-item">
-                    <img src="pic_01/Day_03.jpg" alt="Everyday Rehearsal">
-                    <div class="overlay"></div>
-                    <div class="caption">Daily Practice</div>
-                </div>
-            </div>
-        </div>
-    </section>
+    <main>
+        <!-- Gallery Hero -->
+        <section class="gallery-hero fade-in-up" style="background-image: url('pic_01/Top_02.jpg');">
+            <h1>Gallery</h1>
+        </section>
 
-    <!-- Explore More Section (Rich Cards) -->
-    <section class="explore-more">
-        <div class="container">
-            <h3 class="section-title centered" style="font-size: 2rem; margin-bottom: 3rem;">Discover</h3>
-            <div class="explore-grid rich">
-                <a href="biography.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/Day_01.jpg'); background-position: center center;"></div>
-                    <div class="rich-content">
-                        <h4>Biography</h4>
-                        <p>Learn more about Lin Yizhe's background, education, and journey as a pianist.</p>
-                    </div>
-                </a>
-                <a href="gallery.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/con_00.jpg');"></div>
-                    <div class="rich-content">
-                        <h4>Gallery</h4>
-                        <p>View captures and special moments from previous concerts and masterclasses.</p>
-                    </div>
-                </a>
-                <a href="upcoming.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/con_01.jpg');"></div>
-                    <div class="rich-content">
-                        <h4>Upcoming</h4>
-                        <p>Find out about future performances, collaborative recitals, and appearances.</p>
-                    </div>
-                </a>
-                <a href="programs.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/Day_03.jpg'); background-position: center center;"></div>
-                    <div class="rich-content">
-                        <h4>Programs</h4>
-                        <p>Explore the diverse repertoire of collaborative works and concert programs.</p>
-                    </div>
-                </a>
-                <a href="contact.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/Day_04.jpg'); background-position: center center;"></div>
-                    <div class="rich-content">
-                        <h4>Contact</h4>
-                        <p>Get in touch for professional bookings, collaborations, and inquiries.</p>
-                    </div>
-                </a>
+        <!-- Carousel Section (Portrait Photos) -->
+        <section class="carousel-section fade-in-up">
+            <div class="carousel-header">
+                Website Photography by Yojo
             </div>
-        </div>
-    </section>
-</main>
+
+            <button class="carousel-btn left"><i class="fas fa-arrow-left"></i></button>
+            <button class="carousel-btn right"><i class="fas fa-arrow-right"></i></button>
+
+            <div class="carousel-wrapper" id="carousel-wrapper">
+                <!-- Set 1 -->
+                <div class="carousel-item media-thumbnail" data-type="image"
+                    data-src="pic_01/rooling/06cb8e937823bb50872fc355220ee9de.JPG">
+                    <img src="pic_01/rooling/06cb8e937823bb50872fc355220ee9de.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image"
+                    data-src="pic_01/rooling/11f7900dd64b452b4c4664155673e7b1.JPG">
+                    <img src="pic_01/rooling/11f7900dd64b452b4c4664155673e7b1.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image"
+                    data-src="pic_01/rooling/1a5d1348b35d300da04acd01b566eade.JPG">
+                    <img src="pic_01/rooling/1a5d1348b35d300da04acd01b566eade.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_7402.JPG">
+                    <img src="pic_01/rooling/IMG_7402.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_7403.JPG">
+                    <img src="pic_01/rooling/IMG_7403.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image"
+                    data-src="pic_01/rooling/c1f49f191e87af58ce1788e1674f83bc.JPG">
+                    <img src="pic_01/rooling/c1f49f191e87af58ce1788e1674f83bc.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_9562.JPG">
+                    <img src="pic_01/rooling/IMG_9562.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_9567.JPG">
+                    <img src="pic_01/rooling/IMG_9567.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_9568.JPG">
+                    <img src="pic_01/rooling/IMG_9568.JPG" alt="Portrait">
+                </div>
+                <!-- Set 2 for Infinite Scroll -->
+                <div class="carousel-item media-thumbnail" data-type="image"
+                    data-src="pic_01/rooling/06cb8e937823bb50872fc355220ee9de.JPG">
+                    <img src="pic_01/rooling/06cb8e937823bb50872fc355220ee9de.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_7403.JPG">
+                    <img src="pic_01/rooling/IMG_7403.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image"
+                    data-src="pic_01/rooling/1a5d1348b35d300da04acd01b566eade.JPG">
+                    <img src="pic_01/rooling/1a5d1348b35d300da04acd01b566eade.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_7402.JPG">
+                    <img src="pic_01/rooling/IMG_7402.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image"
+                    data-src="pic_01/rooling/11f7900dd64b452b4c4664155673e7b1.JPG">
+                    <img src="pic_01/rooling/11f7900dd64b452b4c4664155673e7b1.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image"
+                    data-src="pic_01/rooling/c1f49f191e87af58ce1788e1674f83bc.JPG">
+                    <img src="pic_01/rooling/c1f49f191e87af58ce1788e1674f83bc.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_9562.JPG">
+                    <img src="pic_01/rooling/IMG_9562.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_9567.JPG">
+                    <img src="pic_01/rooling/IMG_9567.JPG" alt="Portrait">
+                </div>
+                <div class="carousel-item media-thumbnail" data-type="image" data-src="pic_01/rooling/IMG_9568.JPG">
+                    <img src="pic_01/rooling/IMG_9568.JPG" alt="Portrait">
+                </div>
+            </div>
+        </section>
+
+        <!-- In Performance Section (Captioned Grid) -->
+        <section class="performance-section fade-in-up delay-1">
+            <div class="performance-header">
+                In Performance
+            </div>
+
+            <div class="gallery-grid">
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/A still from Ariadne auf Naxos.JPG">
+                    <img src="pic_01/photos/A still from Ariadne auf Naxos.JPG" alt="A still from Ariadne auf Naxos">
+                    <div class="caption-below">A still from Ariadne auf Naxos</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/A still from The Yeoman of the Guard.JPG">
+                    <img src="pic_01/photos/A still from The Yeoman of the Guard.JPG"
+                        alt="A still from The Yeoman of the Guard">
+                    <div class="caption-below">A still from The Yeoman of the Guard</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/A still from Zanetto.JPG">
+                    <img src="pic_01/photos/A still from Zanetto.JPG" alt="A still from Zanetto">
+                    <div class="caption-below">A still from Zanetto</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/As a Repetiteur for Orphée aux enfers.JPG">
+                    <img src="pic_01/photos/As a Repetiteur for Orphée aux enfers.JPG"
+                        alt="As a Repetiteur for Orphée aux enfers">
+                    <div class="caption-below">As a Repetiteur for Orphée aux enfers</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/Birmingham Light Festival with Jianyu Song.HEIC">
+                    <img src="pic_01/photos/Birmingham Light Festival with Jianyu Song.HEIC"
+                        alt="Birmingham Light Festival with Jianyu Song">
+                    <div class="caption-below">Birmingham Light Festival with Jianyu Song</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/Brooks van der Pump English Song Competition with Henry Godwin.HEIC">
+                    <img src="pic_01/photos/Brooks van der Pump English Song Competition with Henry Godwin.HEIC"
+                        alt="Brooks van der Pump English Song Competition with Henry Godwin">
+                    <div class="caption-below">Brooks van der Pump English Song Competition with Henry Godwin</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/Brooks van der Pump English Song Competition with Zheng Jiang.jpg">
+                    <img src="pic_01/photos/Brooks van der Pump English Song Competition with Zheng Jiang.jpg"
+                        alt="Brooks van der Pump English Song Competition with Zheng Jiang">
+                    <div class="caption-below">Brooks van der Pump English Song Competition with Zheng Jiang</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/Horn Recital in Royal Academy of Music.JPG">
+                    <img src="pic_01/photos/Horn Recital in Royal Academy of Music.JPG"
+                        alt="Horn Recital in Royal Academy of Music">
+                    <div class="caption-below">Horn Recital in Royal Academy of Music</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/Lieder Competition.JPG">
+                    <img src="pic_01/photos/Lieder Competition.JPG" alt="Lieder Competition">
+                    <div class="caption-below">Lieder Competition</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/Master Class with Markus Hadulla.HEIC">
+                    <img src="pic_01/photos/Master Class with Markus Hadulla.HEIC"
+                        alt="Master Class with Markus Hadulla">
+                    <div class="caption-below">Master Class with Markus Hadulla</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/Master Class with Pauliina Tukiainen .JPG">
+                    <img src="pic_01/photos/Master Class with Pauliina Tukiainen .JPG"
+                        alt="Master Class with Pauliina Tukiainen">
+                    <div class="caption-below">Master Class with Pauliina Tukiainen</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/Orchestra Recording in Angle Studio.HEIC">
+                    <img src="pic_01/photos/Orchestra Recording in Angle Studio.HEIC"
+                        alt="Orchestra Recording in Angle Studio">
+                    <div class="caption-below">Orchestra Recording in Angle Studio</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/RCM Keyboard Festival With Bella Marslen .jpg">
+                    <img src="pic_01/photos/RCM Keyboard Festival With Bella Marslen .jpg"
+                        alt="RCM Keyboard Festival With Bella Marslen">
+                    <div class="caption-below">RCM Keyboard Festival With Bella Marslen</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/Rectial with Xiaomin Cheng and Maggie Vaz Neto.JPG">
+                    <img src="pic_01/photos/Rectial with Xiaomin Cheng and Maggie Vaz Neto.JPG"
+                        alt="Rectial with Xiaomin Cheng and Maggie Vaz Neto">
+                    <div class="caption-below">Rectial with Xiaomin Cheng and Maggie Vaz Neto</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/St Philips Recital Series with Sharon Zhou.HEIC">
+                    <img src="pic_01/photos/St Philips Recital Series with Sharon Zhou.HEIC"
+                        alt="St Philips Recital Series with Sharon Zhou">
+                    <div class="caption-below">St Philips Recital Series with Sharon Zhou</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/With Birmingham Opera Company.HEIC">
+                    <img src="pic_01/photos/With Birmingham Opera Company.HEIC" alt="With Birmingham Opera Company">
+                    <div class="caption-below">With Birmingham Opera Company</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/With Conductor Mark Austin.JPG">
+                    <img src="pic_01/photos/With Conductor Mark Austin.JPG" alt="With Conductor Mark Austin">
+                    <div class="caption-below">With Conductor Mark Austin</div>
+                </div>
+                <div class="gallery-card media-thumbnail" data-type="image"
+                    data-src="pic_01/photos/With Director Lysanne van Overbeek .JPG">
+                    <img src="pic_01/photos/With Director Lysanne van Overbeek .JPG"
+                        alt="With Director Lysanne van Overbeek">
+                    <div class="caption-below">With Director Lysanne van Overbeek</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Explore More Section -->
+        <section class="explore-more">
+            <div class="container">
+                <h3 class="section-title centered" style="font-size: 2rem; margin-bottom: 3rem;">Discover</h3>
+                <div class="explore-grid rich">
+                    <a href="biography.html" class="rich-card">
+                        <div class="rich-img"
+                            style="background-image: url('pic_01/Day_01.jpg'); background-position: center center;">
+                        </div>
+                        <div class="rich-content">
+                            <h4>Biography</h4>
+                            <p>Learn more about Lin Yizhe's background, education, and journey as a pianist.</p>
+                        </div>
+                    </a>
+                    <a href="video.html" class="rich-card">
+                        <div class="rich-img" style="background-image: url('pic_01/con_005.jpg');"></div>
+                        <div class="rich-content">
+                            <h4>Video</h4>
+                            <p>View captures and special moments from previous concerts and masterclasses.</p>
+                        </div>
+                    </a>
+                    <a href="upcoming.html" class="rich-card">
+                        <div class="rich-img" style="background-image: url('pic_01/con_01.jpg');"></div>
+                        <div class="rich-content">
+                            <h4>Upcoming</h4>
+                            <p>Find out about future performances, collaborative recitals, and appearances.</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
@@ -140,6 +288,14 @@
         </div>
     </footer>
 
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <span class="lightbox-close">&times;</span>
+        <div class="lightbox-content" id="lightbox-content"></div>
+    </div>
+
     <script src="script.js"></script>
 </body>
+
 </html>
