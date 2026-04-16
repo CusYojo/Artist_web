@@ -1,3 +1,58 @@
+function extractYouTubeVideoId(url) {
+    if (!url) return '';
+
+    try {
+        const parsedUrl = new URL(url, window.location.origin);
+        const host = parsedUrl.hostname.replace(/^www\./, '');
+
+        if (host === 'youtu.be') {
+            return parsedUrl.pathname.split('/').filter(Boolean)[0] || '';
+        }
+
+        if (host === 'youtube.com' || host === 'm.youtube.com' || host === 'music.youtube.com' || host === 'youtube-nocookie.com') {
+            if (parsedUrl.searchParams.has('v')) {
+                return parsedUrl.searchParams.get('v') || '';
+            }
+
+            const pathParts = parsedUrl.pathname.split('/').filter(Boolean);
+            const embedIndex = pathParts.findIndex((part) => part === 'embed' || part === 'shorts' || part === 'live');
+
+            if (embedIndex !== -1 && pathParts[embedIndex + 1]) {
+                return pathParts[embedIndex + 1];
+            }
+        }
+    } catch (error) {
+        console.warn('Unable to parse YouTube URL:', url, error);
+    }
+
+    return '';
+}
+
+function applyYouTubeThumbnails() {
+    const videoThumbnails = document.querySelectorAll('.media-thumbnail[data-type="video"]');
+
+    videoThumbnails.forEach((thumbnail) => {
+        const sourceUrl = thumbnail.getAttribute('data-src');
+        const image = thumbnail.querySelector('img');
+        const videoId = extractYouTubeVideoId(sourceUrl);
+
+        if (!image || !videoId) return;
+
+        const highResThumbnail = `https://i.ytimg.com/vi_webp/${videoId}/maxresdefault.webp`;
+        const fallbackThumbnail = `https://i.ytimg.com/vi/${videoId}/hqdefault.jpg`;
+
+        image.src = highResThumbnail;
+        image.loading = 'lazy';
+        image.decoding = 'async';
+
+        image.addEventListener('error', () => {
+            if (image.src !== fallbackThumbnail) {
+                image.src = fallbackThumbnail;
+            }
+        }, { once: true });
+    });
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Header scroll effect & Active State Logic
     const header = document.getElementById('header');
@@ -133,9 +188,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
+
+    // 5. Auto-load original YouTube thumbnails from each video URL
+    applyYouTubeThumbnails();
 });
 
-    // 5. Lightbox Logic
+    // 6. Lightbox Logic
     const lightbox = document.getElementById('lightbox');
     if (lightbox) {
         const lightboxContent = document.getElementById('lightbox-content');
@@ -206,7 +264,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    // 6. Gallery Carousel Logic
+    // 7. Gallery Carousel Logic
     const carouselWrapper = document.querySelector('.carousel-wrapper');
     const leftBtn = document.querySelector('.carousel-btn.left');
     const rightBtn = document.querySelector('.carousel-btn.right');
