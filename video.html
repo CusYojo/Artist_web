@@ -53,15 +53,14 @@
 
                 <!-- Featured Section -->
                 <div class="featured-media-grid fade-in-up delay-1">
-                    <div class="featured-item" style="height: 350px;">
-                        <iframe width="100%" height="100%"
-                            src="https://www.youtube.com/embed/DZT33ngKHBg?si=FUpvqCAi5LsAeKvd"
-                            title="YouTube video player" frameborder="0"
-                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                            allowfullscreen></iframe>
+                    <div class="featured-item media-thumbnail" data-type="video"
+                        data-src="https://www.youtube.com/embed/DZT33ngKHBg?si=FUpvqCAi5LsAeKvd" style="height: 350px;">
+                        <img src="pic_01/con_03.jpg" alt="Featured Video 1"
+                            style="width: 100%; height: 100%; object-fit: cover;">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
                     </div>
                     <div class="featured-item media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/GQp5ikuhIEA?si=gUVIQYYstRHIuxqh">
+                        data-src="https://www.youtube.com/embed/c5SW6poGRqs?si=FPNicFVHxJ1hFhVX">
                         <img src="pic_01/con_005.jpg" alt="Featured Video 2">
                         <div class="play-icon"><i class="fas fa-play"></i></div>
                     </div>
@@ -76,25 +75,46 @@
                 <h3 id="video-archive"
                     style="font-family: var(--font-heading); font-size: 2.5rem; text-align: center; margin-bottom: 30px;"
                     class="fade-in-up">Video Archive</h3>
-
+                <!-- 大的图片用gallery-item large media-thumbnail -->
                 <div class="masonry-gallery fade-in-up delay-1" style="margin-bottom: 80px;">
-                    <div class="gallery-item large media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/GQp5ikuhIEA?si=gUVIQYYstRHIuxqh">
-                        <img src="pic_01/con_01.jpg" alt="Archive Video 1">
+                    <div class="gallery-item media-thumbnail" data-type="video"
+                        data-src="https://www.youtube.com/embed/dZjkI2RiNmU?si=3OABCec_I6SEBZ8b">
+                        <img src="pic_01/con_005.jpg" alt="Archive Video 1">
                         <div class="play-icon"><i class="fas fa-play"></i></div>
                         <div class="overlay"></div>
                         <div class="caption">Recital Performance</div>
                     </div>
                     <div class="gallery-item media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/GQp5ikuhIEA?si=gUVIQYYstRHIuxqh">
+                        data-src="https://www.youtube.com/embed/e2WNj5AAcu4?si=wibe1zeDvG30nzFI">
                         <img src="pic_01/con_005.jpg" alt="Archive Video 2">
                         <div class="play-icon"><i class="fas fa-play"></i></div>
                         <div class="overlay"></div>
                         <div class="caption">Rehearsal Session</div>
                     </div>
                     <div class="gallery-item media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/GQp5ikuhIEA?si=gUVIQYYstRHIuxqh">
+                        data-src="https://www.youtube.com/embed/vq7gHwMF8I4?si=9s4SzLtlnWGk37iE">
                         <img src="pic_01/con_03.jpg" alt="Archive Video 3">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                        <div class="overlay"></div>
+                        <div class="caption">Masterclass Clip</div>
+                    </div>
+                    <div class="gallery-item media-thumbnail" data-type="video"
+                        data-src="https://www.youtube.com/embed/APgvD8zOlwM?si=BDRgJ7klopajEXTT">
+                        <img src="pic_01/con_03.jpg" alt="Archive Video 4">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                        <div class="overlay"></div>
+                        <div class="caption">Masterclass Clip</div>
+                    </div>
+                    <div class="gallery-item media-thumbnail" data-type="video"
+                        data-src="https://www.youtube.com/embed/Vwi2IVn3f6U?si=v4O0f03JeuyKuDc5">
+                        <img src="pic_01/con_03.jpg" alt="Archive Video 5">
+                        <div class="play-icon"><i class="fas fa-play"></i></div>
+                        <div class="overlay"></div>
+                        <div class="caption">Masterclass Clip</div>
+                    </div>
+                    <div class="gallery-item media-thumbnail" data-type="video"
+                        data-src="https://www.youtube.com/embed/30aREDKDNWE?si=QsxfayxGN_EotCTJ">
+                        <img src="pic_01/con_03.jpg" alt="Archive Video 6">
                         <div class="play-icon"><i class="fas fa-play"></i></div>
                         <div class="overlay"></div>
                         <div class="caption">Masterclass Clip</div>
@@ -105,11 +125,14 @@
         </section>
 
         <!-- Next Module: Gallery Entrance -->
-        <section class="next-module" style="text-align: center; padding: 4rem 0; background-color: var(--color-light-bg);">
+        <section class="next-module"
+            style="text-align: center; padding: 4rem 0; background-color: var(--color-light-bg);">
             <div class="container fade-in-up">
                 <h2 style="font-family: var(--font-heading); font-size: 2.5rem; margin-bottom: 1rem;">Gallery</h2>
-                <p style="margin-bottom: 2rem; color: var(--color-text-light);">Explore photography and stage captures.</p>
-                <a href="gallery.html" class="cta-button" style="border-color: var(--color-crimson); color: var(--color-crimson);">Go to Gallery</a>
+                <p style="margin-bottom: 2rem; color: var(--color-text-light);">Explore photography and stage captures.
+                </p>
+                <a href="gallery.html" class="cta-button"
+                    style="border-color: var(--color-crimson); color: var(--color-crimson);">Go to Gallery</a>
             </div>
         </section>
 
