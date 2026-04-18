@@ -67,57 +67,59 @@
                 </div>
 
                 <div class="action-buttons fade-in-up delay-1" style="margin-bottom: 80px;">
-                    <a href="#video-archive" class="cta-button"
+                    <a href="#video-archive" id="video-archive-toggle" class="cta-button"
                         style="border-color: var(--color-crimson); color: var(--color-crimson);">More Videos</a>
                 </div>
 
-                <!-- Video Archive Grid -->
-                <h3 id="video-archive"
-                    style="font-family: var(--font-heading); font-size: 2.5rem; text-align: center; margin-bottom: 30px;"
-                    class="fade-in-up">Video Archive</h3>
-                <!-- 大的图片用gallery-item large media-thumbnail -->
-                <div class="masonry-gallery fade-in-up delay-1" style="margin-bottom: 80px;">
-                    <div class="gallery-item media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/dZjkI2RiNmU?si=3OABCec_I6SEBZ8b">
-                        <img src="pic_01/con_005.jpg" alt="Archive Video 1">
-                        <div class="play-icon"><i class="fas fa-play"></i></div>
-                        <div class="overlay"></div>
-                        <div class="caption">Recital Performance</div>
-                    </div>
-                    <div class="gallery-item media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/e2WNj5AAcu4?si=wibe1zeDvG30nzFI">
-                        <img src="pic_01/con_005.jpg" alt="Archive Video 2">
-                        <div class="play-icon"><i class="fas fa-play"></i></div>
-                        <div class="overlay"></div>
-                        <div class="caption">Rehearsal Session</div>
-                    </div>
-                    <div class="gallery-item media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/vq7gHwMF8I4?si=9s4SzLtlnWGk37iE">
-                        <img src="pic_01/con_03.jpg" alt="Archive Video 3">
-                        <div class="play-icon"><i class="fas fa-play"></i></div>
-                        <div class="overlay"></div>
-                        <div class="caption">Masterclass Clip</div>
-                    </div>
-                    <div class="gallery-item media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/APgvD8zOlwM?si=BDRgJ7klopajEXTT">
-                        <img src="pic_01/con_03.jpg" alt="Archive Video 4">
-                        <div class="play-icon"><i class="fas fa-play"></i></div>
-                        <div class="overlay"></div>
-                        <div class="caption">Masterclass Clip</div>
-                    </div>
-                    <div class="gallery-item media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/Vwi2IVn3f6U?si=v4O0f03JeuyKuDc5">
-                        <img src="pic_01/con_03.jpg" alt="Archive Video 5">
-                        <div class="play-icon"><i class="fas fa-play"></i></div>
-                        <div class="overlay"></div>
-                        <div class="caption">Masterclass Clip</div>
-                    </div>
-                    <div class="gallery-item media-thumbnail" data-type="video"
-                        data-src="https://www.youtube.com/embed/30aREDKDNWE?si=QsxfayxGN_EotCTJ">
-                        <img src="pic_01/con_03.jpg" alt="Archive Video 6">
-                        <div class="play-icon"><i class="fas fa-play"></i></div>
-                        <div class="overlay"></div>
-                        <div class="caption">Masterclass Clip</div>
+                <div id="video-archive-panel" hidden>
+                    <!-- Video Archive Grid -->
+                    <h3 id="video-archive"
+                        style="font-family: var(--font-heading); font-size: 2.5rem; text-align: center; margin-bottom: 30px;"
+                        class="fade-in-up">Video Archive</h3>
+                    <!-- 大的图片用gallery-item large media-thumbnail -->
+                    <div class="masonry-gallery fade-in-up delay-1" style="margin-bottom: 80px;">
+                        <div class="gallery-item media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/dZjkI2RiNmU?si=3OABCec_I6SEBZ8b">
+                            <img src="pic_01/con_005.jpg" alt="Archive Video 1">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="overlay"></div>
+                            <div class="caption">Recital Performance</div>
+                        </div>
+                        <div class="gallery-item media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/e2WNj5AAcu4?si=wibe1zeDvG30nzFI">
+                            <img src="pic_01/con_005.jpg" alt="Archive Video 2">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="overlay"></div>
+                            <div class="caption">Rehearsal Session</div>
+                        </div>
+                        <div class="gallery-item media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/vq7gHwMF8I4?si=9s4SzLtlnWGk37iE">
+                            <img src="pic_01/con_03.jpg" alt="Archive Video 3">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="overlay"></div>
+                            <div class="caption">Masterclass Clip</div>
+                        </div>
+                        <div class="gallery-item media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/APgvD8zOlwM?si=BDRgJ7klopajEXTT">
+                            <img src="pic_01/con_03.jpg" alt="Archive Video 4">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="overlay"></div>
+                            <div class="caption">Masterclass Clip</div>
+                        </div>
+                        <div class="gallery-item media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/Vwi2IVn3f6U?si=v4O0f03JeuyKuDc5">
+                            <img src="pic_01/con_03.jpg" alt="Archive Video 5">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="overlay"></div>
+                            <div class="caption">Masterclass Clip</div>
+                        </div>
+                        <div class="gallery-item media-thumbnail" data-type="video"
+                            data-src="https://www.youtube.com/embed/30aREDKDNWE?si=QsxfayxGN_EotCTJ">
+                            <img src="pic_01/con_03.jpg" alt="Archive Video 6">
+                            <div class="play-icon"><i class="fas fa-play"></i></div>
+                            <div class="overlay"></div>
+                            <div class="caption">Masterclass Clip</div>
+                        </div>
                     </div>
                 </div>
 
