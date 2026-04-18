@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voices in Flight - Programme</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            /* Light sky blue gradient matching the poster */
+            background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 50%, #bae6fd 100%);
+            font-family: 'Cormorant Garamond', serif;
+            color: #1e293b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        /* Ambient glow effects to mimic the magical feel in the poster */
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .glow-1 {
+            top: 10%; right: 10%;
+            width: 300px; height: 300px;
+            background: rgba(255, 255, 255, 0.8);
+        }
+
+        .glow-2 {
+            bottom: 5%; left: 5%;
+            width: 400px; height: 400px;
+            background: rgba(255, 223, 186, 0.4);
+        }
+
+        .programme-container {
+            width: 100%;
+            max-width: 850px;
+            margin: 60px 20px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.05),
+                        inset 0 0 0 1px rgba(255,255,255,0.8),
+                        inset 0 0 20px rgba(212, 175, 55, 0.1);
+            padding: 70px 90px;
+            position: relative;
+            z-index: 1;
+        }
+
+        /* Elegant golden border inside the container */
+        .programme-container::after {
+            content: '';
+            position: absolute;
+            top: 25px; right: 25px; bottom: 25px; left: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 12px;
+            pointer-events: none;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.8rem;
+            color: #0f172a;
+            margin: 0 0 15px 0;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            background: linear-gradient(to right, #0f172a, #334155, #0f172a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .performers {
+            font-family: 'Cinzel', serif;
+            font-size: 1.4rem;
+            color: #947e45; /* Soft gold tone */
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .event-details {
+            font-size: 1.2rem;
+            color: #475569;
+            margin-top: 25px;
+            line-height: 1.6;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
+            margin: 45px 0;
+            position: relative;
+        }
+
+        .divider::after {
+            content: '❖';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(212, 175, 55, 0.8);
+            font-size: 1.2rem;
+            background: #fff;
+            padding: 0 10px;
+        }
+
+        .description {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            text-align: justify;
+            text-justify: inter-word;
+            color: #334155;
+            margin: 0 auto;
+            max-width: 90%;
+        }
+
+        .description::first-letter {
+            font-size: 3rem;
+            font-family: 'Cinzel', serif;
+            color: #947e45;
+            float: left;
+            margin-right: 8px;
+            line-height: 1;
+            padding-top: 4px;
+        }
+
+        .programme-section {
+            text-align: center;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #0f172a;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .programme-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .programme-item {
+            margin-bottom: 30px;
+            position: relative;
+            transition: transform 0.3s ease;
+        }
+
+        .programme-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .composer {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1.25rem;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .piece {
+            display: block;
+            font-size: 1.35rem;
+            color: #475569;
+            font-style: italic;
+        }
+
+        .note {
+            display: block;
+            font-size: 1rem;
+            color: #64748b;
+            margin-top: 3px;
+        }
+
+        @media (max-width: 768px) {
+            .programme-container {
+                margin: 20px;
+                padding: 40px 30px;
+            }
+            .programme-container::after {
+                top: 15px; right: 15px; bottom: 15px; left: 15px;
+            }
+            h1 {
+                font-size: 2.5rem;
+            }
+            .description {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Background ambiance -->
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <div class="programme-container">
+        <div class="header">
+            <h1>VOICES IN FLIGHT</h1>
+            <div class="performers">Soprano: Xingtian Ge | Pianist: Yizhe Lin</div>
+            
+            <div class="event-details">
+                <strong>Friday, 1 May 2026, 1:00 PM</strong><br>
+                Bournville Quaker Meeting House,<br>
+                65 Linden Road, Birmingham, B30 1JT
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="description">
+            Voices in Flight is a journey into the air, carried by the human voice. In the world of vocal music, the coloratura soprano is the voice closest to flight. This sound shimmers and soars beyond the limits of range, unfolding brilliant cascades of notes high above. The agile runs and crystalline high tones are not merely feats of virtuosity, but expressions of emotional freedom. Join us for this performance to experience how the coloratura soprano writes poetry in flight.
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="programme-section">
+            <h2>PROGRAMME</h2>
+            <ul class="programme-list">
+                <li class="programme-item">
+                    <span class="composer">Wolfgang Amadeus Mozart</span>
+                    <span class="piece">Exsultate, jubilate, K. 165</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Franz Schubert</span>
+                    <span class="piece">Lachen und Weinen; Suleika II</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Richard Strauss</span>
+                    <span class="piece">Amor</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Frédéric Chopin</span>
+                    <span class="piece">Nocturne in C minor, Op. 48, No. 1</span>
+                    <span class="note">(Piano Solo)</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Traditional Chinese Folk Song</span>
+                    <span class="piece">Jasmine Flower (茉莉花)</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Gaetano Donizetti</span>
+                    <span class="piece">"Ah! tardai troppo... O luce di quest'anima"</span>
+                    <span class="note">from Linda di Chamounix</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Eva Dell'Acqua</span>
+                    <span class="piece">Villanelle</span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
