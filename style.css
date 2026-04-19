@@ -458,10 +458,28 @@ section {
     font-family: var(--font-body);
     font-size: 0.9rem;
     color: var(--color-warm-grey);
-    text-transform: uppercase;
-    letter-spacing: 2px;
     margin-top: 15px;
     text-align: right;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 4px;
+}
+
+.quote-author-name {
+    font-family: var(--font-heading);
+    font-size: 1.4rem;
+    font-style: italic;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #414138;
+}
+
+.quote-author-title {
+    font-size: 0.95rem;
+    letter-spacing: 1.4px;
+    text-transform: uppercase;
+    color: var(--color-crimson);
 }
 
 @media (max-width: 768px) {
