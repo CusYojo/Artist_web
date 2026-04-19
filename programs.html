@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,10 +9,13 @@
     <!-- Fonts and Icons -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,400&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
 
     <!-- Sticky Navigation -->
@@ -40,103 +44,139 @@
         </div>
     </header>
 
-<main style="min-height: calc(100vh - 100px); padding-top: 80px;">
-    <!-- Programs Section -->
-    <section id="programs" class="programs">
-        <div class="container fade-in-up">
-            <h2 class="section-title centered">Repertoire & Programs</h2>
-            <div class="programs-grid">
-                <a id="recent-repertoire-list" href="prgm/professional_repertoire_list.html"
-                    class="program-card program-card-link" style="scroll-margin-top: 120px;">
-                    <h3>近两年曲目列表</h3>
-                    <ul>
-                        <li>Professional Repertoire List</li>
-                        <li>Recent two-year selections</li>
-                        <li>View online and download PDF</li>
-                    </ul>
-                </a>
-                <a id="lunchtime-concert-program" href="prgm/lunchtime_concert_program.html"
-                    class="program-card program-card-link" style="scroll-margin-top: 120px;">
-                    <h3>Lunchtime Concert Program</h3>
-                    <ul>
-                        <li>Voices in Flight</li>
-                        <li>Soprano: Xingtian Ge</li>
-                        <li>Pianist: Yizhe Lin</li>
-                    </ul>
-                </a>
-                <a id="eveningtime-concert-program" href="prgm/eveningtime_concert_program.html"
-                    class="program-card program-card-link" style="scroll-margin-top: 120px;">
-                    <h3>Eveningtime Concert Program</h3>
-                    <ul>
-                        <li>Intimate Echoes</li>
-                        <li>A Journey Through Love and Longing</li>
-                        <li>Song, violin, and piano recital</li>
-                    </ul>
-                </a>
+    <main style="min-height: calc(100vh - 100px); padding-top: 80px;">
+        <!-- Programs Section -->
+        <section id="programs" class="programs">
+            <div class="container fade-in-up">
+                <h2 class="section-title centered">Repertoire & Programs</h2>
+                <div class="programs-list">
+                    <a id="recent-repertoire-list" href="prgm/professional_repertoire_list.html"
+                        class="event-item program-row" style="scroll-margin-top: 120px;">
+                        <div class="event-header">
+                            <div class="event-details">
+                                <h4>Recent Repertoire List</h4>
+                                <p>A selected overview of recent repertoire across song, opera, chamber, and orchestral collaboration.</p>
+                            </div>
+                        </div>
+                        <div class="event-program-details program-row-details">
+                            <h5>Introduction</h5>
+                            <div class="program-content">
+                                <div class="program-text">
+                                    <p>Explore a curated selection of works from recent seasons, presented in a clear web format with the original PDF also available for download and professional reference.</p>
+                                    <span class="cta-button small program-row-cta">Explore</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a id="lunchtime-concert-program" href="prgm/lunchtime_concert_program.html"
+                        class="event-item program-row" style="scroll-margin-top: 120px;">
+                        <div class="event-header">
+                            <div class="event-details">
+                                <h4>Lunchtime Concert Program</h4>
+                                <p>Voices in Flight, a luminous recital for soprano and piano.</p>
+                            </div>
+                        </div>
+                        <div class="event-program-details program-row-details">
+                            <h5>Introduction</h5>
+                            <div class="program-content">
+                                <div class="program-text">
+                                    <p>This programme brings together radiant vocal writing, lyric elegance, and intimate piano partnership in a concise recital format designed for a refined midday concert setting.</p>
+                                    <span class="cta-button small program-row-cta">Explore</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                    <a id="eveningtime-concert-program" href="prgm/eveningtime_concert_program.html"
+                        class="event-item program-row" style="scroll-margin-top: 120px;">
+                        <div class="event-header">
+                            <div class="event-details">
+                                <h4>Eveningtime Concert Program</h4>
+                                <p>Intimate Echoes, an evening journey through love and longing.</p>
+                            </div>
+                        </div>
+                        <div class="event-program-details program-row-details">
+                            <h5>Introduction</h5>
+                            <div class="program-content">
+                                <div class="program-text">
+                                    <p>An evening programme shaped with greater emotional breadth, pairing voice, violin, and piano in a sequence that moves from intimate reflection toward a richer dramatic close.</p>
+                                    <span class="cta-button small program-row-cta">Explore</span>
+                                </div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Explore More Section (Rich Cards) -->
-    <section class="explore-more">
-        <div class="container">
-            <h3 class="section-title centered" style="font-size: 2rem; margin-bottom: 3rem;">Discover</h3>
-            <div class="explore-grid rich">
-                <a href="biography.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/Day_01.jpg'); background-position: center center;"></div>
-                    <div class="rich-content">
-                        <h4>Biography</h4>
-                        <p>Learn more about Lin Yizhe's background, education, and journey as a pianist.</p>
-                    </div>
-                </a>
-                <a href="gallery.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/con_00.jpg');"></div>
-                    <div class="rich-content">
-                        <h4>Media</h4>
-                        <p>View captures and special moments from previous concerts and masterclasses.</p>
-                    </div>
-                </a>
-                <a href="upcoming.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/con_01.jpg');"></div>
-                    <div class="rich-content">
-                        <h4>Upcoming</h4>
-                        <p>Find out about future performances, collaborative recitals, and appearances.</p>
-                    </div>
-                </a>
-                <a href="programs.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/pgm_01.jpg'); background-position: center center;"></div>
-                    <div class="rich-content">
-                        <h4>Programs</h4>
-                        <p>Explore the diverse repertoire of collaborative works and concert programs.</p>
-                    </div>
-                </a>
-                <a href="contact.html" class="rich-card">
-                    <div class="rich-img" style="background-image: url('pic_01/Day_04.jpg'); background-position: center center;"></div>
-                    <div class="rich-content">
-                        <h4>Contact</h4>
-                        <p>Get in touch for professional bookings, collaborations, and inquiries.</p>
-                    </div>
-                </a>
+        <!-- Explore More Section (Rich Cards) -->
+        <section class="explore-more">
+            <div class="container">
+                <h3 class="section-title centered" style="font-size: 2rem; margin-bottom: 3rem;">Discover</h3>
+                <div class="explore-grid rich">
+                    <a href="biography.html" class="rich-card">
+                        <div class="rich-img"
+                            style="background-image: url('pic_01/Day_01.jpg'); background-position: center center;">
+                        </div>
+                        <div class="rich-content">
+                            <h4>Biography</h4>
+                            <p>Learn more about Lin Yizhe's background, education, and journey as a pianist.</p>
+                        </div>
+                    </a>
+                    <a href="gallery.html" class="rich-card">
+                        <div class="rich-img" style="background-image: url('pic_01/con_00.jpg');"></div>
+                        <div class="rich-content">
+                            <h4>Media</h4>
+                            <p>View captures and special moments from previous concerts and masterclasses.</p>
+                        </div>
+                    </a>
+                    <a href="upcoming.html" class="rich-card">
+                        <div class="rich-img" style="background-image: url('pic_01/con_01.jpg');"></div>
+                        <div class="rich-content">
+                            <h4>Upcoming</h4>
+                            <p>Find out about future performances, collaborative recitals, and appearances.</p>
+                        </div>
+                    </a>
+                    <a href="programs.html" class="rich-card">
+                        <div class="rich-img"
+                            style="background-image: url('pic_01/pgm_01.jpg'); background-position: center center;">
+                        </div>
+                        <div class="rich-content">
+                            <h4>Programs</h4>
+                            <p>Explore the diverse repertoire of collaborative works and concert programs.</p>
+                        </div>
+                    </a>
+                    <a href="contact.html" class="rich-card">
+                        <div class="rich-img"
+                            style="background-image: url('pic_01/Day_04.jpg'); background-position: center center;">
+                        </div>
+                        <div class="rich-content">
+                            <h4>Contact</h4>
+                            <p>Get in touch for professional bookings, collaborations, and inquiries.</p>
+                        </div>
+                    </a>
+                </div>
             </div>
-        </div>
-    </section>
-</main>
+        </section>
+    </main>
     <footer class="footer">
         <div class="container">
             <div class="footer-content">
                 <div class="brand">Lin Yizhe</div>
                 <div class="copyright">&copy; 2025 Lin Yizhe. All Rights Reserved.</div>
                 <div class="socials">
-                    <a href="https://www.instagram.com/yizhelin1102?igsh=MWNqbjdmenQ5Z2txcg%3D%3D&utm_source=qr" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
-                    <a href="https://www.facebook.com/share/1EGCfntgxn/?mibextid=wwXIfr" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
-                    <a href="http://www.youtube.com/@yizhelin7931" target="_blank" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.instagram.com/yizhelin1102?igsh=MWNqbjdmenQ5Z2txcg%3D%3D&utm_source=qr"
+                        target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/share/1EGCfntgxn/?mibextid=wwXIfr" target="_blank"
+                        aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="http://www.youtube.com/@yizhelin7931" target="_blank" aria-label="YouTube"><i
+                            class="fab fa-youtube"></i></a>
                     <a href="mailto:13651405618@163.com" aria-label="Email"><i class="fas fa-envelope"></i></a>
                 </div>
             </div>
         </div>
     </footer>
 
-    
+
     <!-- Lightbox Modal -->
     <div id="lightbox" class="lightbox">
         <span class="lightbox-close">&times;</span>
@@ -145,4 +185,5 @@
 
     <script src="script.js"></script>
 </body>
+
 </html>
