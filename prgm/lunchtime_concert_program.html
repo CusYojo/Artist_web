@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lunchtime Concert Program | Voices in Flight</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #e0f2fe 0%, #ffffff 52%, #cfe8ff 100%);
+            font-family: 'Cormorant Garamond', serif;
+            color: #1e293b;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(80px);
+            z-index: 0;
+        }
+
+        .glow-1 {
+            top: 8%;
+            right: 8%;
+            width: 320px;
+            height: 320px;
+            background: rgba(255, 255, 255, 0.85);
+        }
+
+        .glow-2 {
+            bottom: 6%;
+            left: 6%;
+            width: 380px;
+            height: 380px;
+            background: rgba(255, 223, 186, 0.34);
+        }
+
+        .programme-container {
+            width: 100%;
+            max-width: 860px;
+            margin: 60px 20px;
+            background: rgba(255, 255, 255, 0.85);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px rgba(0, 0, 0, 0.05),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.8),
+                inset 0 0 20px rgba(212, 175, 55, 0.1);
+            padding: 70px 90px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .programme-container::after {
+            content: '';
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            bottom: 25px;
+            left: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.4);
+            border-radius: 12px;
+            pointer-events: none;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            color: #947e45;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.5rem;
+            color: #0f172a;
+            margin: 0 0 15px 0;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+            background: linear-gradient(to right, #0f172a, #334155, #0f172a);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        .performers {
+            font-family: 'Cinzel', serif;
+            font-size: 1.25rem;
+            color: #947e45;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .event-details {
+            font-size: 1.1rem;
+            color: #475569;
+            margin-top: 25px;
+            line-height: 1.6;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.6), transparent);
+            margin: 45px 0;
+            position: relative;
+        }
+
+        .divider::after {
+            content: '❖';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(212, 175, 55, 0.8);
+            font-size: 1.2rem;
+            background: #fff;
+            padding: 0 10px;
+        }
+
+        .description {
+            font-size: 1.25rem;
+            line-height: 1.8;
+            text-align: justify;
+            text-justify: inter-word;
+            color: #334155;
+            margin: 0 auto;
+            max-width: 90%;
+        }
+
+        .description::first-letter {
+            font-size: 3rem;
+            font-family: 'Cinzel', serif;
+            color: #947e45;
+            float: left;
+            margin-right: 8px;
+            line-height: 1;
+            padding-top: 4px;
+        }
+
+        .programme-section {
+            text-align: center;
+        }
+
+        .rationale-section {
+            max-width: 92%;
+            margin: 0 auto;
+            color: #334155;
+        }
+
+        .rationale-group {
+            margin-bottom: 30px;
+        }
+
+        .rationale-heading {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #947e45;
+            margin-bottom: 12px;
+        }
+
+        .rationale-section p {
+            font-size: 1.16rem;
+            line-height: 1.8;
+            margin: 0 0 14px;
+            text-align: justify;
+            text-justify: inter-word;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.2rem;
+            color: #0f172a;
+            margin-bottom: 40px;
+            letter-spacing: 2px;
+        }
+
+        .programme-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .programme-item {
+            margin-bottom: 30px;
+            transition: transform 0.3s ease;
+        }
+
+        .programme-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .composer {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1.2rem;
+            color: #1e293b;
+            margin-bottom: 5px;
+        }
+
+        .piece {
+            display: block;
+            font-size: 1.3rem;
+            color: #475569;
+            font-style: italic;
+        }
+
+        .note {
+            display: block;
+            font-size: 1rem;
+            color: #64748b;
+            margin-top: 3px;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid rgba(148, 126, 69, 0.6);
+            border-radius: 999px;
+            color: #947e45;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.65);
+        }
+
+        .back-link:hover {
+            background: #947e45;
+            color: #ffffff;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(148, 126, 69, 0.18);
+        }
+
+        .back-link-row {
+            margin-top: 36px;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .programme-container {
+                margin: 20px;
+                padding: 40px 30px;
+            }
+
+            .programme-container::after {
+                top: 15px;
+                right: 15px;
+                bottom: 15px;
+                left: 15px;
+            }
+
+            h1 {
+                font-size: 2.4rem;
+            }
+
+            .description {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <div class="programme-container">
+        <div class="header">
+            <div class="eyebrow">Lunchtime Concert Program</div>
+            <h1>VOICES IN FLIGHT</h1>
+            <div class="performers">Soprano: Xingtian Ge | Pianist: Yizhe Lin</div>
+
+            <div class="event-details">
+                A curated one-hour recital for soprano and piano
+            </div>
+        </div>
+
+
+
+        <div class="divider"></div>
+
+        <div class="programme-section">
+            <h2>INTRODUCTION</h2>
+            <div class="rationale-section">
+                <div class="rationale-group">
+                    <div class="rationale-heading">Why It Works for Lunchtime</div>
+                    <p>This program is ideally suited for a lunchtime recital. With a total duration of approximately
+                        one hour, it offers a high-density gala-style selection of works that fits the midday format
+                        beautifully, providing a full artistic journey within a concise frame.</p>
+                    <p>The theme <em>Voices in Flight</em> emphasizes lightness, freedom, and soaring brilliance. The
+                        agile runs and crystalline coloratura writing create an uplifting energy that feels especially
+                        effective for a midday audience seeking a brief but inspiring spiritual escape from the routines
+                        of the day.</p>
+                    <p>The duo format of voice and piano is also especially well matched to an intimate church setting,
+                        helping foster a close connection between performers and listeners, which is one of the great
+                        strengths of a successful lunchtime concert series.</p>
+                </div>
+
+                <div class="rationale-group">
+                    <div class="rationale-heading">Audience Experience</div>
+                    <p>This concert offers the audience a multi-sensory journey of ascent. Listeners encounter the awe
+                        of virtuosity through the soprano's shimmering high tones and airborne runs, experience a wide
+                        emotional arc from Mozart's radiant joy to Schubert's yearning and Donizetti's theatrical flair,
+                        and hear a thoughtful bridge between East and West through the inclusion of <em>Jasmine
+                            Flower</em>.</p>
+                    <p>The result is a luminous one-hour immersion that leaves the audience with a sense of lightness,
+                        freshness, and renewed energy for the rest of the day.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="programme-section">
+            <h2>PROGRAMME</h2>
+            <ul class="programme-list">
+                <li class="programme-item">
+                    <span class="composer">Wolfgang Amadeus Mozart</span>
+                    <span class="piece">Exsultate, jubilate, K. 165</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Franz Schubert</span>
+                    <span class="piece">Lachen und Weinen; Suleika II</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Richard Strauss</span>
+                    <span class="piece">Amor</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Fr&eacute;d&eacute;ric Chopin</span>
+                    <span class="piece">Nocturne in C minor, Op. 48, No. 1</span>
+                    <span class="note">(Piano Solo)</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Chinese Folk Song</span>
+                    <span class="piece">Jasmine Flower</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Gaetano Donizetti</span>
+                    <span class="piece">&quot;Ah! tardai troppo... O luce di quest'anima&quot;</span>
+                    <span class="note">from Linda di Chamounix</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Eva Dell'Acqua</span>
+                    <span class="piece">Villanelle</span>
+                </li>
+            </ul>
+
+            <div class="back-link-row">
+                <a href="../programs.html#lunchtime-concert-program" class="back-link">Back to Programs</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -495,6 +495,12 @@ section {
     transition: transform var(--transition-medium), box-shadow var(--transition-medium);
 }
 
+.program-card-link {
+    display: block;
+    color: inherit;
+    text-decoration: none;
+}
+
 .program-card:hover {
     transform: translateY(-5px);
     box-shadow: 0 10px 30px rgba(185, 169, 156, 0.3);

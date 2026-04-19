@@ -1,0 +1,415 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eveningtime Concert Program | Intimate Echoes</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&display=swap');
+
+        body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1f1630 0%, #3a274d 45%, #efe6d8 100%);
+            font-family: 'Cormorant Garamond', serif;
+            color: #f8f3eb;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        .glow {
+            position: absolute;
+            border-radius: 50%;
+            filter: blur(90px);
+            z-index: 0;
+        }
+
+        .glow-1 {
+            top: 6%;
+            right: 10%;
+            width: 340px;
+            height: 340px;
+            background: rgba(242, 199, 130, 0.18);
+        }
+
+        .glow-2 {
+            bottom: 8%;
+            left: 6%;
+            width: 420px;
+            height: 420px;
+            background: rgba(238, 214, 189, 0.18);
+        }
+
+        .programme-container {
+            width: 100%;
+            max-width: 900px;
+            margin: 60px 20px;
+            background: rgba(28, 20, 42, 0.78);
+            backdrop-filter: blur(14px);
+            -webkit-backdrop-filter: blur(14px);
+            border-radius: 20px;
+            box-shadow: 0 28px 56px rgba(0, 0, 0, 0.24),
+                inset 0 0 0 1px rgba(255, 255, 255, 0.08),
+                inset 0 0 24px rgba(242, 199, 130, 0.08);
+            padding: 70px 90px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .programme-container::after {
+            content: '';
+            position: absolute;
+            top: 25px;
+            right: 25px;
+            bottom: 25px;
+            left: 25px;
+            border: 1px solid rgba(242, 199, 130, 0.28);
+            border-radius: 12px;
+            pointer-events: none;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .eyebrow {
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 2px;
+            color: #f2c782;
+            text-transform: uppercase;
+            margin-bottom: 16px;
+        }
+
+        h1 {
+            font-family: 'Cinzel', serif;
+            font-size: 3.2rem;
+            color: #fff7ed;
+            margin: 0 0 15px 0;
+            letter-spacing: 3px;
+            line-height: 1.18;
+        }
+
+        .performers {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            color: #f2c782;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        .event-details {
+            font-size: 1.12rem;
+            color: #e7dccd;
+            margin-top: 25px;
+            line-height: 1.7;
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(242, 199, 130, 0.55), transparent);
+            margin: 45px 0;
+            position: relative;
+        }
+
+        .divider::after {
+            content: '❖';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: rgba(242, 199, 130, 0.8);
+            font-size: 1.2rem;
+            background: #2a1f3b;
+            padding: 0 10px;
+        }
+
+        .description {
+            font-size: 1.22rem;
+            line-height: 1.85;
+            text-align: justify;
+            text-justify: inter-word;
+            color: #f1eadf;
+            margin: 0 auto;
+            max-width: 92%;
+        }
+
+        .description::first-letter {
+            font-size: 3rem;
+            font-family: 'Cinzel', serif;
+            color: #f2c782;
+            float: left;
+            margin-right: 8px;
+            line-height: 1;
+            padding-top: 4px;
+        }
+
+        .programme-section {
+            text-align: center;
+        }
+
+        .rationale-section {
+            max-width: 92%;
+            margin: 0 auto;
+            color: #f1eadf;
+        }
+
+        .rationale-group {
+            margin-bottom: 30px;
+        }
+
+        .rationale-heading {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f2c782;
+            margin-bottom: 12px;
+        }
+
+        .rationale-section p {
+            font-size: 1.16rem;
+            line-height: 1.85;
+            margin: 0 0 14px;
+            text-align: justify;
+            text-justify: inter-word;
+            color: #f1eadf;
+        }
+
+        h2 {
+            font-family: 'Cinzel', serif;
+            font-size: 2.15rem;
+            color: #fff7ed;
+            margin-bottom: 26px;
+            letter-spacing: 2px;
+        }
+
+        .programme-subtitle {
+            font-family: 'Cinzel', serif;
+            font-size: 1.05rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: #f2c782;
+            margin: 36px 0 22px;
+        }
+
+        .programme-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            text-align: center;
+        }
+
+        .programme-item {
+            margin-bottom: 28px;
+            transition: transform 0.3s ease;
+        }
+
+        .programme-item:hover {
+            transform: translateY(-2px);
+        }
+
+        .composer {
+            display: block;
+            font-family: 'Cinzel', serif;
+            font-weight: 600;
+            font-size: 1.14rem;
+            color: #fff7ed;
+            margin-bottom: 5px;
+        }
+
+        .piece {
+            display: block;
+            font-size: 1.28rem;
+            color: #efe6d8;
+            font-style: italic;
+        }
+
+        .note {
+            display: block;
+            font-size: 1rem;
+            color: #d9cbb8;
+            margin-top: 4px;
+        }
+
+        .back-link {
+            display: inline-block;
+            padding: 12px 24px;
+            border: 1px solid rgba(242, 199, 130, 0.45);
+            border-radius: 999px;
+            color: #f2c782;
+            text-decoration: none;
+            font-family: 'Cinzel', serif;
+            font-size: 0.95rem;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            background: rgba(255, 255, 255, 0.04);
+        }
+
+        .back-link:hover {
+            background: #f2c782;
+            color: #2a1f3b;
+            transform: translateY(-1px);
+            box-shadow: 0 10px 24px rgba(242, 199, 130, 0.18);
+        }
+
+        .back-link-row {
+            margin-top: 36px;
+            text-align: right;
+        }
+
+        @media (max-width: 768px) {
+            .programme-container {
+                margin: 20px;
+                padding: 40px 30px;
+            }
+
+            .programme-container::after {
+                top: 15px;
+                right: 15px;
+                bottom: 15px;
+                left: 15px;
+            }
+
+            h1 {
+                font-size: 2.2rem;
+            }
+
+            .description {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="glow glow-1"></div>
+    <div class="glow glow-2"></div>
+
+    <div class="programme-container">
+        <div class="header">
+            <div class="eyebrow">Eveningtime Concert Program</div>
+            <h1>INTIMATE ECHOES</h1>
+            <div class="performers">A Journey Through Love and Longing</div>
+
+            <div class="event-details">
+                An evening recital of song, violin, and piano<br>
+                shaped around longing, reflection, and lyrical intensity
+            </div>
+        </div>
+
+
+
+        <div class="divider"></div>
+
+        <div class="programme-section">
+            <h2>INTRODUCTION</h2>
+            <div class="rationale-section">
+                <div class="rationale-group">
+                    <div class="rationale-heading">Why It Works for Evening</div>
+                    <p>This program is excellently suited for an evening recital. The theme <em>Intimate Echoes: A
+                            Journey Through Love and Longing</em> explores profound human experiences, including secret
+                        invitations, heartfelt yearning, and the joy and pain of love. That emotional depth, together
+                        with the dramatic storytelling of composers such as Wolf and Schumann, resonates especially well
+                        in the focused and reflective atmosphere of an evening performance.</p>
+                    <p>The program also features a diverse range of performers, including multiple vocalists and violin,
+                        giving the concert a larger expressive palette and a stronger sense of occasion. Its two-part
+                        structure, with a clear first half and second half, suits the pacing of an evening recital
+                        particularly well, allowing the audience time to absorb and reflect on the evolving emotional
+                        journey.</p>
+                </div>
+
+                <div class="rationale-group">
+                    <div class="rationale-heading">Audience Experience</div>
+                    <p>This concert offers a vividly textured exploration of the human heart. Audiences travel through a
+                        global and emotional landscape, from the elegance of Purcell and the tenderness of Chinese song
+                        to the passion of Portuguese repertoire and the operatic brilliance of Donizetti and
+                        Leh&aacute;r.</p>
+                    <p>The experience is further enriched by the dialogue between voice and instrument, especially
+                        through Clara Schumann's <em>Three Romances for Violin and Piano</em>, which provides a lyrical
+                        centerpiece within the wider dramatic arc. By the end, listeners are invited to leave with the
+                        wonderful echoes of a shared encounter with love, longing, and emotional release.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="divider"></div>
+
+        <div class="programme-section">
+            <h2>PROGRAMME</h2>
+
+            <div class="programme-subtitle">First Half</div>
+            <ul class="programme-list">
+                <li class="programme-item">
+                    <span class="composer">Richard Strauss</span>
+                    <span class="piece">Heimliche Aufforderung</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Franz Schubert</span>
+                    <span class="piece">Gretchen am Spinnrade</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Wang Long</span>
+                    <span class="piece">春花秋月何时了</span>
+                    <span class="note">Text by Li Yu | Sung by a soprano</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Henry Purcell</span>
+                    <span class="piece">If Music Be the Food of Love</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Richard Strauss</span>
+                    <span class="piece">Allerseelen</span>
+                    <span class="note">Sung by a counter-tenor</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Clara Schumann</span>
+                    <span class="piece">Three Romances for Violin and Piano, Op. 22</span>
+                </li>
+            </ul>
+
+            <div class="programme-subtitle">Second Half</div>
+            <ul class="programme-list">
+                <li class="programme-item">
+                    <span class="composer">Robert Schumann</span>
+                    <span class="piece">Stille Tr&auml;nen</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Hugo Wolf</span>
+                    <span class="piece">Wo find' ich Trost</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Madeleine Dring</span>
+                    <span class="piece">Song of a Nightclub Proprietress</span>
+                    <span class="note">Sung by a baritone</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Jorge Salgueiro</span>
+                    <span class="piece">Oh que famintos beijos na floresta!</span>
+                    <span class="note">(Portuguese Song)</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Gaetano Donizetti</span>
+                    <span class="piece">Quel guardo, il cavaliere</span>
+                </li>
+                <li class="programme-item">
+                    <span class="composer">Franz Leh&aacute;r</span>
+                    <span class="piece">Meine Lippen, sie k&uuml;ssen so hei&szlig;</span>
+                    <span class="note">Sung by a soprano</span>
+                </li>
+            </ul>
+
+            <div class="back-link-row">
+                <a href="../programs.html#eveningtime-concert-program" class="back-link">Back to Programs</a>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
