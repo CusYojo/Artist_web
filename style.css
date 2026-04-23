@@ -640,6 +640,7 @@ section {
     font-size: 0.88rem;
 }
 
+
 @media (max-width: 768px) {
     .event-item {
         flex-direction: column;
